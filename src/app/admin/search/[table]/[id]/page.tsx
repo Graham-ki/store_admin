@@ -18,7 +18,7 @@ export default function ItemDetailsPage() {
       try {
         // Fetch the item based on the table and ID
         const { data, error } = await supabase
-          .from(table as 'users' | 'order' | 'category' | 'expenses' | 'ledger' | 'materials' | 'order_item' | 'product' | 'products_materials' | 'proof_of_payment' | 'user_ledger') 
+          .from(table as 'users' | 'order' | 'category' | 'expenses' | 'ledger' | 'materials' | 'order_item' | 'product' | 'products_materials' | 'proof_of_payment' | 'finance') 
           .select('*')
           .eq('id', id)
           .single();

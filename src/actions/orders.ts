@@ -128,7 +128,7 @@ export const checkApprovedOrdersAndDecrementStock = async () => {
     // Mark the order as processed to avoid re-processing
     const { error: updateError } = await supabase
       .from('order')
-      .update({ processed: true })  // Set the 'processed' column to true
+      .update({ is_processed: true })  // Set the 'processed' column to true
       .eq('id', order.id);
 
     if (updateError) {
