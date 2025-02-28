@@ -24,7 +24,7 @@ const NAV_LINKS = [
   { href: '/admin/dashboard', label: 'Dashboard' },
   { href: '/admin/stock', label: 'Stock' },
   { href: '/admin/orders', label: 'Orders' },
-  { href: '/admin/purchase', label: 'Purchases' },
+  //{ href: '/admin/purchase', label: 'Purchases' },
 ];
 
 export const Header = () => {

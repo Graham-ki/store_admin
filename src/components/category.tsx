@@ -96,59 +96,7 @@ export const CategoryTableRow = ({
             'No products linked to this category'
           )}
         </TableCell>
-        <TableCell>
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Button size='icon' variant='ghost'>
-                <MoreHorizontal className='h-4 w-4' />
-                <span className='sr-only'>Open menu</span>
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align='end' className='w-[160px]'>
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuItem
-                onClick={() =>
-                  handleEditClick({
-                    ...category,
-                    intent: 'update',
-                  })
-                }
-              >
-                Edit
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setIsDeleteDialogOpen(true)}>
-                Delete
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </TableCell>
       </TableRow>
-
-      <Dialog
-        open={isDeleteDialogOpen}
-        onOpenChange={() => setIsDeleteDialogOpen(!isDeleteDialogOpen)}
-      >
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
-            <DialogDescription>
-              This action cannot be undone. This will permanently delete this
-              category.
-            </DialogDescription>
-          </DialogHeader>
-          <div className='flex justify-end gap-4'>
-            <Button
-              variant='outline'
-              onClick={() => setIsDeleteDialogOpen(false)}
-            >
-              Cancel
-            </Button>
-            <Button variant='destructive' onClick={handleDelete}>
-              Confirm Delete
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </>
   );
 };

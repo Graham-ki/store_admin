@@ -99,7 +99,6 @@ const CategoriesPageComponent: FC<Props> = ({ categories }) => {
   return (
     <main className='grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8'>
       <div className='flex items-center my-10'>
-        <h1 className='text-3xl font-bold mb-6 text-center shadow-lg p-4 rounded-lg bg-blue-100 dark:bg-gray-800 dark:text-white'>Categories Management</h1>
         <div className='ml-auto flex items-center gap-2'>
           <Dialog
             open={isCreateCategoryModalOpen}
@@ -107,21 +106,6 @@ const CategoriesPageComponent: FC<Props> = ({ categories }) => {
               setIsCreateCategoryModalOpen(!isCreateCategoryModalOpen)
             }
           >
-            <DialogTrigger asChild>
-              <Button
-                size='sm'
-                className='h-8 gap-1'
-                onClick={() => {
-                  setCurrentCategory(null);
-                  setIsCreateCategoryModalOpen(true);
-                }}
-              >
-                <PlusCircle className='h-3.5 w-3.5' />
-                <span className='sr-only sm:not-sr-only sm:whitespace-nowrap'>
-                  Add Category
-                </span>
-              </Button>
-            </DialogTrigger>
             <DialogContent className='dialog'>
               <DialogHeader>
                 <DialogTitle>Create Category</DialogTitle>
