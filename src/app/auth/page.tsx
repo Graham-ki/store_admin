@@ -47,7 +47,7 @@ export default function Auth() {
       const user = await authenticate(email, password);
 
       // Redirect to the admin dashboard if user is an admin
-      if (user?.type === 'PRODUCTION_MANAGER') {
+      if (user?.type === 'STORE_ADMIN') {
         router.push('/admin');
       }
     } catch (error) {

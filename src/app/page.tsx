@@ -38,7 +38,7 @@ const DashboardPage = () => {
         <Card className="w-80 shadow-lg hover:shadow-xl transition-shadow bg-white">
           <CardHeader>
             <CardTitle className="text-center text-xl font-bold text-gray-800">
-              Production panel
+              Store panel
             </CardTitle>
           </CardHeader>
           <CardContent className="text-center">
