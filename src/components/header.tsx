@@ -23,7 +23,7 @@ import { debounce } from 'lodash'; // Import debounce utility
 const NAV_LINKS = [
   { href: '/admin/dashboard', label: 'Dashboard' },
   { href: '/admin/stock', label: 'Stock' },
-  { href: '/admin/orders', label: 'Orders' },
+  //{ href: '/admin/orders', label: 'Orders' },
   //{ href: '/admin/purchase', label: 'Purchases' },
 ];
 
